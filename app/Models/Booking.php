@@ -16,7 +16,15 @@ class Booking extends Model
         'status',
         'total_price',
         'booking_date',
-        'payment_status'
+        'payment_status',
+        'passenger_count',
+        'api_booking_id',
+        'booking_details'
+    ];
+    
+    protected $casts = [
+        'booking_date' => 'date',
+        'booking_details' => 'array'
     ];
 
     public function user()

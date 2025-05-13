@@ -31,11 +31,11 @@
                     
                     <div>
                         <h2 class="text-xl font-semibold mb-4">Pesan Tiket</h2>
-                        <form action="{{ route('transports.book', $transport['id_transport']) }}" method="POST" class="space-y-4">
+                        <form action="{{ route('transports.book', $transport['id']) }}" method="POST" class="space-y-4">
                             @csrf
                             <div>
-                                <label for="passenger_count" class="block text-sm font-medium text-gray-600">Jumlah Penumpang</label>
-                                <input type="number" name="passenger_count" id="passenger_count" min="1" max="{{ $transport['seat'] }}"
+                                <label for="seat" class="block text-sm font-medium text-gray-600">Jumlah Penumpang</label>
+                                <input type="number" name="seat" id="seat" min="1" max="{{ $transport['seat'] }}"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                                     required>
                                 <p class="mt-1 text-sm text-gray-500">Maksimal {{ $transport['seat'] }} penumpang</p>
