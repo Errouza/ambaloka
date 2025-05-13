@@ -60,7 +60,7 @@
                             <div class="text-sm text-gray-900">{{ $transport['transport_type']['description'] }}</div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                            <a href="{{ route('transports.show', $transport['id_transport']) }}" 
+                            <a href="{{ route('transports.show', $transport['id']) }}" 
                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                 Detail
                             </a>
